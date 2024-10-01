@@ -11,30 +11,12 @@ jobs:
     steps:
       - name: Checkout the code from the repository
         uses: actions/checkout@v4
-      # - name: Installing the latest Node.js
-      #  uses: actions/setup-node@v4
-      #- name: Installing the dependencies
-      # run: npm install
-      #- name: Linting the script
-      # run: npm run lint
-      #- name: Testing the script
-      # run: npm run test
-      #- name: Building the project
-      # run: npm run build
-      #- name: Deploying the script
-      # run: echo "Projects are getting deployed...."
-
-      # - name: Updating the package list
-      #   run: apt-get update -y
-
-  second-job:
-    needs: first-job
-    runs-on: ubuntu-latest
-    steps:
       - name: Installing the latest Node.js
         uses: actions/setup-node@v4
       - name: Installing the dependencies
         run: npm install
+      # - name: Building the project
+      #   run: npm run build
       - name: Linting the script
         run: npm run lint
       - name: Testing the script
@@ -42,5 +24,4 @@ jobs:
       - name: Building the project
         run: npm run build
       - name: Deploying the script
-        # run: echo "Projects are getting deployed...."
-        run: npm run dev
+        run: echo "Projects are getting deployed...."
