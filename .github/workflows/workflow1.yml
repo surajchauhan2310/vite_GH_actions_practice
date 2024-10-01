@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Checkout the code from the repository
         uses: actions/checkout@v4
-      - name: Installing the latest Node.js
-        uses: actions/setup-node@v4
-      - name: Installing the dependencies
-        run: npm install
+      # - name: Installing the latest Node.js
+      #  uses: actions/setup-node@v4
+      #- name: Installing the dependencies
+      # run: npm install
       #- name: Linting the script
       # run: npm run lint
       #- name: Testing the script
@@ -31,6 +31,10 @@ jobs:
     needs: first-job
     runs-on: ubuntu-latest
     steps:
+      - name: Installing the latest Node.js
+        uses: actions/setup-node@v4
+      - name: Installing the dependencies
+        run: npm install
       - name: Linting the script
         run: npm run lint
       - name: Testing the script
