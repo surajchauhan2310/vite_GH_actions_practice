@@ -2,7 +2,7 @@ name: Lint, Test and Deploy on Push
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   first-job:
     runs-on: ubuntu-latest
