@@ -22,8 +22,8 @@ jobs:
       - name: Building the project
         run: npm run build
       - name: Deploying the script
-        #run: npm run dev
-        run: echo "Projects are getting deployed...."
+        run: npm run dev
+        #run: echo "Projects are getting deployed...."
       #- name: Updating the package list
       #run: apt-get update -y
   #second-job:
