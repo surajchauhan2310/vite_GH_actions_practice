@@ -14,6 +14,7 @@ jobs:
       - name: Updating the package list
         run: apt-get update -y
   second-job:
+    needs: first-job
     runs-on: ubuntu-latest
     steps:
       - name: Linting the script
