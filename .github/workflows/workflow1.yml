@@ -7,10 +7,12 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: installing the lastest node
-        uses: actions/setup-node@v4
       - name: checkout the code from the repos
         uses: actions/checkout@v4
+      - name: installing the lastest node
+        uses: actions/setup-node@v4
+      - name: Installing the dependencies
+        run: npm install
       #- name: Building the project
       # run: npm run build
       - name: Linting the script
