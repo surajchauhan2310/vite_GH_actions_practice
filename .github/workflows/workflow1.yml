@@ -17,6 +17,8 @@ jobs:
     needs: first-job
     runs-on: ubuntu-latest
     steps:
+      - name: Building the project
+        run: npm run build
       - name: Linting the script
         run: npm run lint
       - name: Testing the script
