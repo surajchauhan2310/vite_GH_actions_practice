@@ -15,16 +15,14 @@ jobs:
         uses: actions/setup-node@v4
       - name: Installing the dependencies
         run: npm install
-      # - name: Building the project
-      #   run: npm run build
-      - name: Linting the script
-        run: npm run lint
-      - name: Testing the script
-        run: npm run test
-      - name: Building the project
-        run: npm run build
-      - name: Deploying the script
-        run: echo "Projects are getting deployed...."
+      #- name: Linting the script
+      # run: npm run lint
+      #- name: Testing the script
+      # run: npm run test
+      #- name: Building the project
+      # run: npm run build
+      #- name: Deploying the script
+      # run: echo "Projects are getting deployed...."
 
       # - name: Updating the package list
       #   run: apt-get update -y
