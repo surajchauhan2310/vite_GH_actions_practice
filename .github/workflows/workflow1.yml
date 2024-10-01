@@ -1,1 +1,24 @@
-name: 
+name: Lint, Test and Deploy on Push
+on:
+  push:
+    branches:
+      - main
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: installing the lastest node
+        uses: actions/setup-node@v4
+      - name: checkout the code from the repos
+        uses: actions/checkout@v4
+      - name: Updating the package list
+        run: apt-get update -y
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linting the script
+        run: npm run lint
+      - name: Testing the script
+        run: npm run test
+      - name: Deploying the script
+        run: npm run dev
