@@ -11,12 +11,6 @@ jobs:
         uses: actions/setup-node@v4
       - name: checkout the code from the repos
         uses: actions/checkout@v4
-      #- name: Updating the package list
-      #run: apt-get update -y
-  second-job:
-    needs: first-job
-    runs-on: ubuntu-latest
-    steps:
       - name: Building the project
         run: npm run build
       - name: Linting the script
@@ -25,3 +19,17 @@ jobs:
         run: npm run test
       - name: Deploying the script
         run: npm run dev
+      #- name: Updating the package list
+      #run: apt-get update -y
+  #second-job:
+  # needs: first-job
+  #runs-on: ubuntu-latest
+  #steps:
+  # - name: Building the project
+  #  run: npm run build
+  #- name: Linting the script
+  # run: npm run lint
+  #- name: Testing the script
+  # run: npm run test
+  #- name: Deploying the script
+  # run: npm run dev
